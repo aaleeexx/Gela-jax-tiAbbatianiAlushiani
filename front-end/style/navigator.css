@@ -1,0 +1,37 @@
+/* TAGS */
+.navigator > ul {
+    height: -moz-fit-content;
+    width: -moz-fit-content;
+    margin: 0 auto;
+    height: fit-content;
+    width: fit-content;
+}
+.navigator > ul > li {
+    align-items: center;
+    display: inline-flex;
+    height: 40px;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+    transition: background-color 0.2s;
+    width: 130px;
+}
+
+/* CLASSES */
+.navigator {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    font-family: 'Satisfy', cursive;
+    font-size: 21px;
+    position: absolute;
+    top: 0;
+    height: 40px;
+    margin: 0;
+    width: 100%;
+}
+
+/* PSEUDOS */
+.navigator > ul > li:hover {
+    background-color: rgb(40, 40, 40);
+    cursor: pointer;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gelati Abbatiani-Alushiani - Create one</title>
+    <link rel="stylesheet" href="../style/origin.css">
+    <link rel="stylesheet" href="../style/insert.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/navigator.css">
+
+</head>
+<body>
+    <canvas id="stage"></canvas>
+    <div class="navigator">
+        <ul>
+            <li id="home">Home</li>
+        </ul>
+    </div>
+
+    <form action="../../back-end/create.php" method="post">
+        <input type="text" name="ic_name" id="ic_name">
+        <input type="text" name="ic_cost" id="ic_cost">
+        <input type="text" name="ic_productor" id="ic_productor">
+
+        <input type="submit" value="Create">
+    </form>
+
+    <div class="footer">
+        <h4>Copyright © 2018 Abati, Alushi. All rights reserved</h4>
+        <ul>
+            <li>Privacy policies</li>
+            <li>Use of Cookies</li>
+            <li>Conditions of use</li>
+            <li>Legal notices</li>
+        </ul>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="../script/origin.js"></script>
+    <script src="../script/background.js"></script>
+</body>
+</html>
