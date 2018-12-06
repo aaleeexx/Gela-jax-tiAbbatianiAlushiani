@@ -1,21 +1,17 @@
-$('#load').click(() =>
-{
-    setInterval(() => {
-        $.get('../back-end/loader.php', data => {
-            let html = `<ul>`
+$.getJSON('../back-end/loader.php', data => {
+    let html = ``
 
-            $(data).each((ind, item) => {
-                html += `
-                <ul>
-                    <li>`+item.ID+`</li>
-                    <li>`+item.ID+`</li>
-                    <li>`+item.ID+`</li>
-                    <li>`+item.ID+`</li>`
-            })
-            html += `</ul>`
-            $('.content').html(html)
-        })
-    }, 500)
+    $(data).each((ind, item) => {
+        html += `
+        <tr>
+            <td>`+item.ID+`</td>
+            <td>`+item.name+`</td>
+            <td>`+item.cost+`</td>
+            <td>`+item.producer+`</td>
+        </tr>`
+    })
+
+    $('.content > table').html(html)
 })
 
 $('#make').click(() => {
