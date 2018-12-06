@@ -23,7 +23,7 @@
     color: white;
     font-family: 'Satisfy', cursive;
     font-size: 21px;
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 40px;
     margin: 0;

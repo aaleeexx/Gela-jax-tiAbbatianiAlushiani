@@ -1,5 +1,12 @@
+// This will take the jsion data from the PHP 'loader' page and show it into a stylized table
 $.getJSON('../back-end/loader.php', data => {
-    let html = ``
+    let html = `
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Cost</th>
+            <th>Producer</th>
+        </tr>`
 
     $(data).each((ind, item) => {
         html += `
@@ -14,10 +21,16 @@ $.getJSON('../back-end/loader.php', data => {
     $('.content > table').html(html)
 })
 
-$('#make').click(() => {
-    window.open('pages/insert.html', '_self')
-})
+// Simple controls for the 'Ice Creams' and 'Create One' buttons, in the main pag (index.html)
+$('#make').click(() => window.open('pages/insert.html', '_self'))
+$('#home').click(() => window.open('../index.html', '_self'))
 
-$('#home').click(() => {
-    window.open('../index.html', '_self')
+// This will send all the data to the page creator.php, which will insert them into the database
+$('.workplace > form').submit(() => {
+    $.post('../../back-end/creator.php', res => {
+        if(res == '200')
+            window.open('../index.html', '_self')
+        else
+            alert("Error on creating the new ice cream")
+    })
 })

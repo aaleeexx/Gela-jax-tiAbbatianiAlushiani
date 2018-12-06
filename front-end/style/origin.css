@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Thambi');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 /* TAGS */
 body, html {
@@ -15,3 +16,6 @@ canvas {
     width: 100%;
     z-index: -1;
 }
+
+/* PSEUDOS */
+*::-moz-selection, *::selection { background-color: rgb(44, 173, 206); }

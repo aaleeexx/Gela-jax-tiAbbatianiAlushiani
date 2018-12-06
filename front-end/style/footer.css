@@ -39,6 +39,7 @@
     display: flex;
     font-family: 'Montserrat';
     font-size: 11px;
+    height: 35px;
     justify-content: center;
     position: fixed;
     width: 100%;
