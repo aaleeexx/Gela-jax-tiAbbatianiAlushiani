@@ -3,9 +3,9 @@ $.getJSON('../back-end/loader.php', data => {
     let html = `
         <tr>
             <th>ID</th>
-            <th>Name</th>
-            <th>Cost</th>
-            <th>Producer</th>
+            <th>NAME</th>
+            <th>COST</th>
+            <th>PRODUCER</th>
         </tr>`
 
     $(data).each((ind, item) => {

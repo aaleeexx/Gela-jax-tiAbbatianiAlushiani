@@ -20,12 +20,14 @@ input {
     width: 320px;
 }
 input[type='text'] {
+    animation: happen 0.2s forwards;
     box-shadow: inset 0 4px 5px rgb(150, 150, 150);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom-color: orangered;
     font-family: 'Roboto Slab';
     font-size: 18px;
+    opacity: 0;
 }
 input[type='submit'] {
     border-style: none;
@@ -41,3 +43,14 @@ input[type='submit'] {
 /* PSEUDOS */
 input[type='submit']:hover  { cursor: pointer; }
 input[type='submit']:active { box-shadow: inset 0 3px 3px rgb(28, 28, 28), 0 0 5px black; }
+
+/* IDs */
+#ic_name      { animation-delay: 0.1s; }
+#ic_cost      { animation-delay: 0.4s; }
+#ic_productor { animation-delay: 0.8s; }
+
+/* ANIMATIONS */
+@keyframes happen
+{
+    100% { opacity: 1; }
+}
