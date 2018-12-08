@@ -23,14 +23,12 @@ $.getJSON('../back-end/loader.php', data => {
 
 // Simple controls for the 'Ice Creams' and 'Create One' buttons, in the main pag (index.html)
 $('#make').click(() => window.open('pages/insert.html', '_self'))
-$('#home').click(() => window.open('../index.html', '_self'))
+$('#home').click(() => location.reload(true))
 
 // This will send all the data to the page creator.php, which will insert them into the database
-$('.workplace > form').submit(() => {
-    $.post('../../back-end/creator.php', res => {
-        if(res == '200')
-            window.open('../index.html', '_self')
-        else
-            alert("Error on creating the new ice cream")
-    })
+$.post('../../back-end/creator.php', res => {
+    if(res == '200')
+        window.open('../index.html', '_self')
+    else
+        alert("Error on creating the new ice cream")
 })

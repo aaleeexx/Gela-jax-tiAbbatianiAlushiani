@@ -1,7 +1,3 @@
 <?php
-    $connection = mysqli_connect('localhost', 'root', '', 'gelati');
-    if (!$connection)
-	{
-		die("That damn databse..." . mysqli_connect_error());
-	}
+    $connection = mysqli_connect('localhost', 'root', '', 'gelati') or die("That damn databse..." . mysqli_connect_error());
 ?>

@@ -19,14 +19,16 @@
 
 /* CLASSES */
 .navigator {
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
     background-color: rgba(0, 0, 0, 0.85);
     color: white;
     font-family: 'Satisfy', cursive;
     font-size: 21px;
-    position: fixed;
-    top: 0;
     height: 40px;
     margin: 0;
+    user-select: none;
     width: 100%;
 }
 
