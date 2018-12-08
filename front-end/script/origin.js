@@ -26,9 +26,18 @@ $('#make').click(() => window.open('pages/insert.html', '_self'))
 $('#home').click(() => location.reload(true))
 
 // This will send all the data to the page creator.php, which will insert them into the database
-$.post('../../back-end/creator.php', res => {
-    if(res == '200')
-        window.open('../index.html', '_self')
-    else
-        alert("Error on creating the new ice cream")
+$('form').submit(e =>
+{
+    e.preventDefault()
+
+    $.ajax({
+        cache: false,
+        crossDomain: true,
+        data: $('form').serialize(),
+        type: 'POST',
+        url: '../../back-end/creator.php',
+        success: res => {
+            window.open('../index.html', '_self')
+        }
+    })
 })
